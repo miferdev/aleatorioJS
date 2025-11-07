@@ -87,9 +87,8 @@ footer {
     background-color: #222;
     color: #bbb;
     text-align: center;
-    padding: 30px 15px;
+    padding: 2em 1em;
     margin-top: auto;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -106,27 +105,13 @@ footer a {
     margin: 0 1%;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
 .social-links {
     margin: 2% 0;
-}
-
-.social-links a {
-    font-size: 1.5em; /* Tamaño de los iconos */
-    color: #bbb; /* Color de los iconos */
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #fff; /* Color al pasar el ratón */
 }
 
 .social-links a img{
     width: 2%;
     height: auto;
     object-fit: contain;
-    /*border-radius: 70%;*/
+    border-radius: 70%;
 }
