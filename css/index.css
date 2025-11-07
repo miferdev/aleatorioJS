@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: large;
+    padding: 4% 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-grow: 1;
+}
+
+aside{
+    width: 10%; 
+    flex-shrink: 0;
+    padding: 1% 0;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    padding: 2%;
+}
+
+section{
+    flex-basis: 30%; 
+    padding: 1%; 
+    background-color: rgb(235, 178, 33);
+    margin: 1%;
+    border-radius: 1em;
+}
+section img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+section a{
+    text-decoration: none;
+}
+
+section p{
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.form {
+    width: 20%;
+    flex-basis: 100%;
+}
+
+.form img{
+    width: 50%;
+    height: auto;
+}
+
+/*footer para todas las páginas*/
+
+footer {
+    width: 100%;
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    margin: 0 auto; /* Centra el contenido */
+}
+
+footer p {
+    margin: 1% 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 1%;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin: 2% 0;
+}
+
+.social-links a {
+    font-size: 1.5em; /* Tamaño de los iconos */
+    color: #bbb; /* Color de los iconos */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff; /* Color al pasar el ratón */
+}
+
+.social-links a img{
+    width: 2%;
+    height: auto;
+    object-fit: contain;
+    /*border-radius: 70%;*/
+}
