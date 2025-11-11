@@ -2,7 +2,6 @@
     width: 90%; 
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 50px;
 }
 
 #controles-tiempo {
@@ -20,14 +19,14 @@
 .etiqueta {
     font-size: 1em;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 0.25em 0;
 }
 
 .modificador {
     color: #333;
     border: solid #ccc;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
     cursor: pointer;
     font-size: 0.9em;
     margin: 2px;
@@ -38,10 +37,9 @@
     font-weight: bold;
     color: #4CAF50;
     background-color: #d9d9d9;
-    width: 40%;
+    width: 100%;
     margin: 0.75em auto;
     padding: 1.5em 3em;
-    border-radius: 5%;
     box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
     font-family: 'Courier New', Courier, monospace;
 }

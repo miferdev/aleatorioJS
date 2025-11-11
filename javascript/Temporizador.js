@@ -26,7 +26,7 @@ function formatoTiempo(totalSegundos) {
     const m = String(minutos).padStart(2, '0');
     const s = String(segundos).padStart(2, '0');
 
-    return `${h}:${h}:${s}`;
+    return `${h}:${m}:${s}`;
 }
 
 
