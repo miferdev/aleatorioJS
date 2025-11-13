@@ -70,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let xmlString = serializer.serializeToString(xmlDoc);
         xmlString = `<?xml version="1.0" encoding="UTF-8"?>\n` + xmlString;
 
+        xmlString = formatXml(xmlString);
+
         const blob = new Blob([xmlString], { type: "application/xml" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
@@ -80,6 +82,37 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(link);
         URL.revokeObjectURL(link.href);
     }
+
+function formatXml(xml) {
+    const PADDING = '  ';
+    const reg = /(>)(<)(\/*)/g;
+    let formatted = '';
+    let pad = 0;
+
+    xml = xml.replace(reg, '$1\r\n$2$3');
+    const lines = xml.split('\r\n');
+
+    lines.forEach((node, index) => {
+        let indent = 0;
+
+        if (node.match(/.+<\/\w[^>]*>$/)) {
+            indent = 0;
+        } else if (node.match(/^<\/\w/)) {
+            if (pad !== 0) pad -= 1;
+        } else if (node.match(/^<\w([^>]*[^/])?>.*$/)) {
+            indent = 1;
+        } else {
+            indent = 0;
+        }
+
+        let extraPad = pad > 0 ? 1 : 0;
+
+        formatted += PADDING.repeat(pad + extraPad) + node + '\r\n';
+        pad += indent;
+    });
+
+    return formatted.trim();
+}
     
     function setupFormNavigation() {
         form.addEventListener('click', (event) => {
